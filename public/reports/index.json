@@ -1,5 +1,13 @@
 [
   {
+    "slug": "rust-trending-20260130",
+    "title": { "en": "GitHub Trending Rust — Week of Jan 30, 2026", "zh": "GitHub Trending Rust 周报 — 2026 年 1 月 30 日" },
+    "description": { "en": "19 trending Rust projects — AI agents dominate: Goose (+2,875), Codex (+1,318), cc-switch (+1,773)", "zh": "19 个热门 Rust 项目——AI Agent 主导：Goose (+2,875)、Codex (+1,318)、cc-switch (+1,773)" },
+    "date": "2026-01-30",
+    "tags": ["Rust", "GitHub", "Trending", "Weekly"],
+    "category": "rust"
+  },
+  {
     "slug": "ai-daily-20260130",
     "title": { "en": "AI Daily Report — January 30, 2026", "zh": "AI 日报 — 2026 年 1 月 30 日" },
     "description": { "en": "45 posts from r/ClaudeAI, r/ChatGPT, r/AI_Agents — Palantir debate, hallucination concerns, agent frameworks", "zh": "来自 r/ClaudeAI、r/ChatGPT、r/AI_Agents 的 45 篇帖子——Palantir 争议、幻觉问题、Agent 框架" },

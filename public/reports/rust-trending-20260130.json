@@ -1,0 +1,495 @@
+{
+  "type": "Report",
+  "props": {
+    "title": { "en": "GitHub Trending Rust Projects — Week of Jan 30, 2026", "zh": "GitHub Trending Rust 项目周报 — 2026 年 1 月 30 日" },
+    "theme": "auto"
+  },
+  "children": [
+    {
+      "type": "BrandHeader",
+      "props": {
+        "badge": { "en": "AI-Generated Report", "zh": "AI 生成报告" },
+        "poweredBy": "Claude Code + Actionbook Skills"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Overview", "zh": "概览" },
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "type": "MetricsGrid",
+          "props": {
+            "metrics": [
+              { "label": { "en": "Total Projects", "zh": "上榜项目" }, "value": "19", "icon": "star" },
+              { "label": { "en": "Total Stars", "zh": "总 Star 数" }, "value": "463K+", "icon": "chart" },
+              { "label": { "en": "Stars This Week", "zh": "本周新增 Star" }, "value": "9,500+", "trend": "up" },
+              { "label": { "en": "New Projects", "zh": "新上榜项目" }, "value": "3", "icon": "bulb" }
+            ],
+            "cols": 4
+          }
+        },
+        {
+          "type": "Callout",
+          "props": {
+            "type": "tip",
+            "title": { "en": "Key Trend", "zh": "关键趋势" },
+            "content": { "en": "AI agent tools dominate this week's trending — Goose (2,875 stars), OpenAI Codex (1,318 stars), and cc-switch (1,773 stars) all focus on AI-powered coding assistants. The Rust ecosystem is becoming the go-to choice for building AI agent infrastructure.", "zh": "AI Agent 工具主导本周趋势——Goose（2,875 star）、OpenAI Codex（1,318 star）和 cc-switch（1,773 star）都聚焦于 AI 编程助手。Rust 生态正在成为构建 AI Agent 基础设施的首选。" }
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Top 5 — Hottest This Week", "zh": "Top 5 — 本周最热" },
+        "icon": "star"
+      },
+      "children": [
+        {
+          "type": "Table",
+          "props": {
+            "columns": [
+              { "key": "rank", "label": "#" },
+              { "key": "name", "label": { "en": "Project", "zh": "项目" } },
+              { "key": "weekly", "label": { "en": "Stars This Week", "zh": "本周 Star" } },
+              { "key": "total", "label": { "en": "Total Stars", "zh": "总 Star" } },
+              { "key": "category", "label": { "en": "Category", "zh": "分类" } }
+            ],
+            "rows": [
+              { "rank": "1", "name": "block/goose", "weekly": "2,875", "total": "29,532", "category": "AI Agent" },
+              { "rank": "2", "name": "farion1231/cc-switch", "weekly": "1,773", "total": "14,802", "category": "AI Tool" },
+              { "rank": "3", "name": "openai/codex", "weekly": "1,318", "total": "58,090", "category": "AI Agent" },
+              { "rank": "4", "name": "qarmin/czkawka", "weekly": "693", "total": "28,910", "category": "System Utility" },
+              { "rank": "5", "name": "jdx/mise", "weekly": "569", "total": "23,863", "category": "Dev Tool" }
+            ],
+            "striped": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "AI & Agent Tools", "zh": "AI 与 Agent 工具" },
+        "icon": "bulb",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "Grid",
+          "props": { "cols": 2, "gap": "1rem" },
+          "children": [
+            {
+              "type": "Card",
+              "props": { "variant": "outlined" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "icon": "star",
+                    "title": "block/goose",
+                    "description": { "en": "An open source, extensible AI agent that goes beyond code suggestions — install, execute, edit, and test with any LLM. The #1 trending Rust project this week with 2,875 new stars.", "zh": "开源可扩展 AI Agent，不仅是代码建议——支持安装、执行、编辑和测试，兼容任何 LLM。本周 Rust 第一名，新增 2,875 star。" }
+                  }
+                },
+                {
+                  "type": "MetricsGrid",
+                  "props": {
+                    "metrics": [
+                      { "label": "Stars", "value": "29,532", "trend": "up" },
+                      { "label": "Forks", "value": "2,662" },
+                      { "label": { "en": "This Week", "zh": "本周" }, "value": "+2,875", "trend": "up" }
+                    ],
+                    "cols": 3
+                  }
+                },
+                {
+                  "type": "LinkButton",
+                  "props": { "href": "https://github.com/block/goose", "label": "GitHub", "icon": "github", "external": true }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "outlined" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "icon": "star",
+                    "title": "openai/codex",
+                    "description": { "en": "Lightweight coding agent that runs in your terminal. OpenAI's official CLI agent built with Rust, reaching 58K+ stars.", "zh": "运行在终端中的轻量级编程 Agent。OpenAI 官方 CLI Agent，使用 Rust 构建，已超 58K star。" }
+                  }
+                },
+                {
+                  "type": "MetricsGrid",
+                  "props": {
+                    "metrics": [
+                      { "label": "Stars", "value": "58,090", "trend": "up" },
+                      { "label": "Forks", "value": "7,532" },
+                      { "label": { "en": "This Week", "zh": "本周" }, "value": "+1,318", "trend": "up" }
+                    ],
+                    "cols": 3
+                  }
+                },
+                {
+                  "type": "LinkButton",
+                  "props": { "href": "https://github.com/openai/codex", "label": "GitHub", "icon": "github", "external": true }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "outlined" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "icon": "star",
+                    "title": "farion1231/cc-switch",
+                    "description": { "en": "A cross-platform desktop All-in-One assistant tool for Claude Code, Codex, OpenCode & Gemini CLI. Rapid growth with 1,773 stars this week.", "zh": "跨平台桌面全能助手，支持 Claude Code、Codex、OpenCode 和 Gemini CLI。本周猛增 1,773 star。" }
+                  }
+                },
+                {
+                  "type": "MetricsGrid",
+                  "props": {
+                    "metrics": [
+                      { "label": "Stars", "value": "14,802", "trend": "up" },
+                      { "label": "Forks", "value": "921" },
+                      { "label": { "en": "This Week", "zh": "本周" }, "value": "+1,773", "trend": "up" }
+                    ],
+                    "cols": 3
+                  }
+                },
+                {
+                  "type": "LinkButton",
+                  "props": { "href": "https://github.com/farion1231/cc-switch", "label": "GitHub", "icon": "github", "external": true }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "outlined" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "icon": "star",
+                    "title": "ai-dynamo/dynamo",
+                    "description": { "en": "A Datacenter Scale Distributed Inference Serving Framework. Enterprise-grade AI inference infrastructure built in Rust.", "zh": "数据中心级分布式推理服务框架。使用 Rust 构建的企业级 AI 推理基础设施。" }
+                  }
+                },
+                {
+                  "type": "MetricsGrid",
+                  "props": {
+                    "metrics": [
+                      { "label": "Stars", "value": "5,998", "trend": "up" },
+                      { "label": "Forks", "value": "826" },
+                      { "label": { "en": "This Week", "zh": "本周" }, "value": "+192", "trend": "up" }
+                    ],
+                    "cols": 3
+                  }
+                },
+                {
+                  "type": "LinkButton",
+                  "props": { "href": "https://github.com/ai-dynamo/dynamo", "label": "GitHub", "icon": "github", "external": true }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Developer Tools & Infrastructure", "zh": "开发者工具与基础设施" },
+        "icon": "code",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "Table",
+          "props": {
+            "columns": [
+              { "key": "name", "label": { "en": "Project", "zh": "项目" } },
+              { "key": "description", "label": { "en": "Description", "zh": "描述" } },
+              { "key": "stars", "label": "Stars" },
+              { "key": "weekly", "label": { "en": "This Week", "zh": "本周" } }
+            ],
+            "rows": [
+              {
+                "name": "casey/just",
+                "description": { "en": "Just a command runner — simple, elegant task automation", "zh": "命令运行器——简洁优雅的任务自动化工具" },
+                "stars": "30,126",
+                "weekly": "+234"
+              },
+              {
+                "name": "jdx/mise",
+                "description": { "en": "Dev tools, env vars, task runner — polyglot dev environment manager", "zh": "开发工具、环境变量、任务运行器——多语言开发环境管理器" },
+                "stars": "23,863",
+                "weekly": "+569"
+              },
+              {
+                "name": "astral-sh/ruff",
+                "description": { "en": "Extremely fast Python linter and formatter, written in Rust", "zh": "极速 Python linter 和代码格式化工具，Rust 编写" },
+                "stars": "45,453",
+                "weekly": "+167"
+              },
+              {
+                "name": "denoland/deno",
+                "description": { "en": "A modern runtime for JavaScript and TypeScript", "zh": "现代 JavaScript 和 TypeScript 运行时" },
+                "stars": "105,993",
+                "weekly": "+108"
+              },
+              {
+                "name": "skim-rs/skim",
+                "description": { "en": "Fuzzy Finder in Rust — fzf alternative", "zh": "Rust 模糊查找器——fzf 替代品" },
+                "stars": "6,506",
+                "weekly": "+120"
+              },
+              {
+                "name": "getzola/zola",
+                "description": { "en": "Fast static site generator in a single binary", "zh": "单二进制文件的快速静态站点生成器" },
+                "stars": "16,521",
+                "weekly": "+55"
+              }
+            ],
+            "striped": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "System & Desktop Applications", "zh": "系统与桌面应用" },
+        "icon": "info",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "Table",
+          "props": {
+            "columns": [
+              { "key": "name", "label": { "en": "Project", "zh": "项目" } },
+              { "key": "description", "label": { "en": "Description", "zh": "描述" } },
+              { "key": "stars", "label": "Stars" },
+              { "key": "weekly", "label": { "en": "This Week", "zh": "本周" } }
+            ],
+            "rows": [
+              {
+                "name": "qarmin/czkawka",
+                "description": { "en": "Multi-functional app to find duplicates, empty folders, similar images etc.", "zh": "多功能工具：查找重复文件、空文件夹、相似图片等" },
+                "stars": "28,910",
+                "weekly": "+693"
+              },
+              {
+                "name": "ilya-zlobintsev/LACT",
+                "description": { "en": "Linux GPU Configuration And Monitoring Tool", "zh": "Linux GPU 配置和监控工具" },
+                "stars": "3,806",
+                "weekly": "+112"
+              },
+              {
+                "name": "Moulberry/PandoraLauncher",
+                "description": { "en": "Modern Minecraft launcher with powerful instance management", "zh": "现代 Minecraft 启动器，强大的实例管理功能" },
+                "stars": "402",
+                "weekly": "+160"
+              },
+              {
+                "name": "storytold/artcraft",
+                "description": { "en": "Intentional crafting engine for artists, designers, and filmmakers", "zh": "面向艺术家、设计师和电影制作人的创意引擎" },
+                "stars": "501",
+                "weekly": "+343"
+              }
+            ],
+            "striped": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Web & Infrastructure", "zh": "Web 与基础设施" },
+        "icon": "link",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "Table",
+          "props": {
+            "columns": [
+              { "key": "name", "label": { "en": "Project", "zh": "项目" } },
+              { "key": "description", "label": { "en": "Description", "zh": "描述" } },
+              { "key": "stars", "label": "Stars" },
+              { "key": "weekly", "label": { "en": "This Week", "zh": "本周" } }
+            ],
+            "rows": [
+              {
+                "name": "servo/servo",
+                "description": { "en": "Lightweight, high-performance web engine for embedding in applications", "zh": "轻量高性能 Web 引擎，用于嵌入应用程序" },
+                "stars": "35,292",
+                "weekly": "+198"
+              },
+              {
+                "name": "chroma-core/chroma",
+                "description": { "en": "Open-source search and retrieval database for AI applications", "zh": "开源 AI 搜索和检索数据库" },
+                "stars": "25,839",
+                "weekly": "+176"
+              },
+              {
+                "name": "moghtech/komodo",
+                "description": { "en": "A tool to build and deploy software on many servers", "zh": "在多台服务器上构建和部署软件的工具" },
+                "stars": "9,949",
+                "weekly": "+235"
+              },
+              {
+                "name": "signalapp/libsignal",
+                "description": { "en": "Home to the Signal Protocol and cryptographic primitives", "zh": "Signal 协议和加密原语的实现" },
+                "stars": "5,344",
+                "weekly": "+47"
+              }
+            ],
+            "striped": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Privacy & Productivity", "zh": "隐私与效率" },
+        "icon": "check",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "Card",
+          "props": { "variant": "outlined" },
+          "children": [
+            {
+              "type": "KeyPoint",
+              "props": {
+                "icon": "star",
+                "title": "Zackriya-Solutions/meeting-minutes",
+                "description": { "en": "Privacy-first AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization. 100% local processing, no cloud required.", "zh": "隐私优先的 AI 会议助手：Parakeet/Whisper 实时转录快 4 倍，支持说话人分离和 Ollama 摘要。100% 本地处理，无需云端。" }
+              }
+            },
+            {
+              "type": "MetricsGrid",
+              "props": {
+                "metrics": [
+                  { "label": "Stars", "value": "9,515", "trend": "up" },
+                  { "label": "Forks", "value": "825" },
+                  { "label": { "en": "This Week", "zh": "本周" }, "value": "+149", "trend": "up" }
+                ],
+                "cols": 3
+              }
+            },
+            {
+              "type": "LinkButton",
+              "props": { "href": "https://github.com/Zackriya-Solutions/meeting-minutes", "label": "GitHub", "icon": "github", "external": true }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Trends & Insights", "zh": "趋势与洞察" },
+        "icon": "bulb"
+      },
+      "children": [
+        {
+          "type": "ContributionList",
+          "props": {
+            "items": [
+              {
+                "badge": "1",
+                "title": { "en": "AI Agent Infrastructure in Rust", "zh": "Rust 成为 AI Agent 基础设施首选" },
+                "description": { "en": "4 of the top 5 projects are AI/agent-related (Goose, Codex, cc-switch, Dynamo). Rust's performance and safety guarantees make it ideal for AI agent runtimes. This trend is accelerating — Goose alone gained 2,875 stars this week.", "zh": "Top 5 中有 4 个是 AI/Agent 相关项目（Goose、Codex、cc-switch、Dynamo）。Rust 的性能和安全保证使其成为 AI Agent 运行时的理想选择。这一趋势正在加速——仅 Goose 本周就新增 2,875 star。" }
+              },
+              {
+                "badge": "2",
+                "title": { "en": "CLI AI Assistants Competing", "zh": "CLI AI 助手激烈竞争" },
+                "description": { "en": "cc-switch (1,773 stars/week) acts as a unified frontend for Claude Code, Codex, OpenCode, and Gemini CLI — suggesting users want seamless switching between multiple AI coding tools. The \"AI agent in terminal\" paradigm is now mainstream.", "zh": "cc-switch（1,773 star/周）作为 Claude Code、Codex、OpenCode 和 Gemini CLI 的统一前端——说明用户需要在多个 AI 编码工具之间无缝切换。\"终端中的 AI Agent\" 已成为主流范式。" }
+              },
+              {
+                "badge": "3",
+                "title": { "en": "Privacy-First Local AI", "zh": "隐私优先的本地 AI" },
+                "description": { "en": "meeting-minutes (9.5K stars) emphasizes 100% local processing with Whisper + Ollama. Users increasingly demand AI tools that don't send data to the cloud. Rust enables this with efficient local inference.", "zh": "meeting-minutes（9.5K star）强调使用 Whisper + Ollama 实现 100% 本地处理。用户越来越要求 AI 工具不向云端发送数据。Rust 通过高效的本地推理使之成为可能。" }
+              },
+              {
+                "badge": "4",
+                "title": { "en": "Rust for Python Tooling", "zh": "Rust 重写 Python 工具链" },
+                "description": { "en": "Ruff (45K stars) continues to dominate as the fastest Python linter/formatter. mise (24K stars, +569/week) is gaining momentum as a polyglot dev environment manager. Rust-powered developer tools are becoming the new standard.", "zh": "Ruff（45K star）继续称霸最快 Python linter/formatter。mise（24K star，+569/周）作为多语言开发环境管理器势头强劲。Rust 驱动的开发者工具正在成为新标准。" }
+              }
+            ],
+            "numbered": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "props": {
+        "title": { "en": "Full Ranking", "zh": "完整排行榜" },
+        "icon": "chart",
+        "collapsible": true
+      },
+      "children": [
+        {
+          "type": "ResultsTable",
+          "props": {
+            "columns": [
+              { "key": "rank", "label": "#" },
+              { "key": "name", "label": { "en": "Project", "zh": "项目" } },
+              { "key": "description", "label": { "en": "Description", "zh": "描述" } },
+              { "key": "stars", "label": "Stars" },
+              { "key": "forks", "label": "Forks" },
+              { "key": "weekly", "label": { "en": "This Week", "zh": "本周" } }
+            ],
+            "rows": [
+              { "rank": "1", "name": "block/goose", "description": "AI agent — install, execute, edit, test", "stars": "29,532", "forks": "2,662", "weekly": "+2,875" },
+              { "rank": "2", "name": "farion1231/cc-switch", "description": "All-in-One AI CLI assistant", "stars": "14,802", "forks": "921", "weekly": "+1,773" },
+              { "rank": "3", "name": "openai/codex", "description": "Terminal coding agent", "stars": "58,090", "forks": "7,532", "weekly": "+1,318" },
+              { "rank": "4", "name": "qarmin/czkawka", "description": "Find duplicates & similar files", "stars": "28,910", "forks": "948", "weekly": "+693" },
+              { "rank": "5", "name": "jdx/mise", "description": "Dev tools & env manager", "stars": "23,863", "forks": "849", "weekly": "+569" },
+              { "rank": "6", "name": "storytold/artcraft", "description": "Crafting engine for artists", "stars": "501", "forks": "29", "weekly": "+343" },
+              { "rank": "7", "name": "moghtech/komodo", "description": "Build & deploy on many servers", "stars": "9,949", "forks": "269", "weekly": "+235" },
+              { "rank": "8", "name": "casey/just", "description": "Command runner", "stars": "30,126", "forks": "653", "weekly": "+234" },
+              { "rank": "9", "name": "servo/servo", "description": "Web engine for embedding", "stars": "35,292", "forks": "3,454", "weekly": "+198" },
+              { "rank": "10", "name": "ai-dynamo/dynamo", "description": "Distributed inference framework", "stars": "5,998", "forks": "826", "weekly": "+192" },
+              { "rank": "11", "name": "chroma-core/chroma", "description": "AI search & retrieval DB", "stars": "25,839", "forks": "2,027", "weekly": "+176" },
+              { "rank": "12", "name": "astral-sh/ruff", "description": "Fast Python linter & formatter", "stars": "45,453", "forks": "1,732", "weekly": "+167" },
+              { "rank": "13", "name": "Moulberry/PandoraLauncher", "description": "Modern Minecraft launcher", "stars": "402", "forks": "25", "weekly": "+160" },
+              { "rank": "14", "name": "Zackriya-Solutions/meeting-minutes", "description": "Local AI meeting assistant", "stars": "9,515", "forks": "825", "weekly": "+149" },
+              { "rank": "15", "name": "skim-rs/skim", "description": "Fuzzy finder in Rust", "stars": "6,506", "forks": "235", "weekly": "+120" },
+              { "rank": "16", "name": "ilya-zlobintsev/LACT", "description": "Linux GPU config & monitor", "stars": "3,806", "forks": "93", "weekly": "+112" },
+              { "rank": "17", "name": "denoland/deno", "description": "JS/TS runtime", "stars": "105,993", "forks": "5,879", "weekly": "+108" },
+              { "rank": "18", "name": "getzola/zola", "description": "Static site generator", "stars": "16,521", "forks": "1,112", "weekly": "+55" },
+              { "rank": "19", "name": "signalapp/libsignal", "description": "Signal Protocol library", "stars": "5,344", "forks": "658", "weekly": "+47" }
+            ],
+            "highlights": [
+              { "row": 0, "column": "weekly" },
+              { "row": 1, "column": "weekly" },
+              { "row": 2, "column": "weekly" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "BrandFooter",
+      "props": {
+        "timestamp": "2026-01-30T02:30:00Z",
+        "attribution": { "en": "Data from GitHub Trending. Generated by Claude Code + Actionbook Skills.", "zh": "数据来源：GitHub Trending。由 Claude Code + Actionbook Skills 生成。" },
+        "disclaimer": { "en": "Star counts and rankings reflect the snapshot at the time of generation.", "zh": "Star 数和排名反映生成时的快照数据。" }
+      }
+    }
+  ]
+}
