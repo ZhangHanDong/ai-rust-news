@@ -1,14 +1,15 @@
 {
   "type": "Report",
   "props": {
-    "title": { "en": "AI Daily Report — January 30, 2026", "zh": "AI 日报 — 2026 年 1 月 30 日" }
+    "title": { "en": "AI Daily Report — January 30, 2026", "zh": "AI 日报 — 2026 年 1 月 30 日" },
+    "theme": "auto"
   },
   "children": [
     {
       "type": "BrandHeader",
       "props": {
-        "badge": { "en": "AI Daily Report", "zh": "AI 日报" },
-        "poweredBy": "Actionbook json-ui"
+        "badge": { "en": "AI Daily", "zh": "AI 日报" },
+        "poweredBy": "Actionbook"
       }
     },
     {
@@ -16,10 +17,10 @@
       "props": {
         "cols": 4,
         "metrics": [
-          { "label": { "en": "Total Posts", "zh": "总帖数" }, "value": 45, "icon": "chart" },
-          { "label": { "en": "Hot Discussions (>100 comments)", "zh": "热门讨论 (>100 评论)" }, "value": 8, "icon": "star", "trend": "up" },
+          { "label": { "en": "Posts Analyzed", "zh": "分析帖子数" }, "value": 45, "icon": "paper" },
+          { "label": { "en": "Hot Discussions", "zh": "热门讨论" }, "value": 8, "icon": "bulb", "trend": "up" },
           { "label": { "en": "Communities", "zh": "社区数" }, "value": 3, "icon": "user" },
-          { "label": { "en": "Most Active", "zh": "最活跃社区" }, "value": "r/ChatGPT", "icon": "bulb" }
+          { "label": { "en": "Total Engagement", "zh": "总互动数" }, "value": "3.7k", "icon": "chart", "trend": "up" }
         ]
       }
     },
@@ -33,61 +34,67 @@
       },
       "children": [
         {
-          "type": "Highlight",
+          "type": "Prose",
           "props": {
-            "text": { "en": "Today's top story: Anthropic's partnership with Palantir sparks heated community debate with 860 upvotes and 205 comments. Meanwhile, a discussion on junior developers relying too heavily on AI coding assistants went viral.", "zh": "今日头条：Anthropic 与 Palantir 合作引发社区热议，获 860 票、205 条评论。同时，初级开发者过度依赖 AI 编程助手的讨论也引爆社区。" },
-            "type": "important"
+            "content": { "en": "The Palantir partnership debate dominated today, alongside a provocative discussion about AI-dependent junior developers. Moltbot pricing concerns and the future of software companies in an AI world also drew significant engagement.", "zh": "Palantir 合作争议主导了今天的讨论，同时还有关于 AI 依赖型初级开发者的热议。Moltbot 定价问题和 AI 时代软件公司的未来也引发了大量互动。" }
           }
         },
         {
-          "type": "ContributionList",
+          "type": "Grid",
+          "props": { "cols": 2 },
+          "children": [
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "Anthropic Partnered with Palantir", "zh": "Anthropic 与 Palantir 达成合作" },
+                    "description": { "en": "879 upvotes, 213 comments — Major controversy over Anthropic's partnership with defense contractor Palantir. Community split between pragmatic acceptance and ethical concerns about AI in military applications.", "zh": "879 赞、213 评论 — Anthropic 与国防承包商 Palantir 合作引发重大争议。社区在务实接受和对 AI 军事应用的伦理担忧之间分裂。" },
+                    "icon": "warning",
+                    "variant": "highlight"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "Junior Dev Can't Debug Without AI", "zh": "初级开发者离开 AI 无法调试" },
+                    "description": { "en": "718 upvotes, 217 comments — A senior developer hired a junior who learned to code entirely with AI, now cannot debug without it. Sparking debate: is this the future workforce?", "zh": "718 赞、217 评论 — 一位高级开发者招了一个完全依赖 AI 学编程的初级开发者，现在离开 AI 完全不会调试。引发讨论：这就是未来的劳动力？" },
+                    "icon": "code"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Table",
           "props": {
-            "numbered": true,
-            "items": [
-              {
-                "badge": { "en": "860↑ · 205💬", "zh": "860↑ · 205💬" },
-                "title": { "en": "Anthropic are partnered with Palantir", "zh": "Anthropic 与 Palantir 建立合作关系" },
-                "description": { "en": "Community divided on Anthropic's defense/intelligence partnership. Many question alignment with stated AI safety mission. u/DataPhreak", "zh": "社区对 Anthropic 与国防/情报公司合作意见分裂。许多人质疑这是否与其 AI 安全使命一致。u/DataPhreak" }
-              },
-              {
-                "badge": { "en": "642↑ · 196💬", "zh": "642↑ · 196💬" },
-                "title": { "en": "Hired a junior who learned to code with AI — cannot debug without it", "zh": "招了个用 AI 学编程的初级开发者——离了 AI 就不会调试" },
-                "description": { "en": "Senior dev shares experience with a junior who can generate code but lacks fundamental debugging skills. Sparks debate on AI's role in education. u/InstructionCute5502", "zh": "资深开发者分享经历：新人能用 AI 写代码却缺乏基本调试能力。引发 AI 在教育中角色的讨论。u/InstructionCute5502" }
-              },
-              {
-                "badge": { "en": "189↑ · 259💬", "zh": "189↑ · 259💬" },
-                "title": { "en": "If AI can easily create any software, what happens to software companies?",  "zh": "如果 AI 让人人都能轻松开发软件，软件公司会怎样？" },
-                "description": { "en": "Philosophical discussion on AI's impact on the software industry. Most engaged thread of the day with 259 comments. u/StayAwayFromXX", "zh": "关于 AI 对软件行业影响的深度讨论。今日评论最多的帖子（259 条）。u/StayAwayFromXX" }
-              },
-              {
-                "badge": { "en": "185↑ · 113💬", "zh": "185↑ · 113💬" },
-                "title": { "en": "Claude/Moltbot is now an unaffordable novelty", "zh": "Claude/Moltbot 已成为消费不起的新鲜玩意" },
-                "description": { "en": "Users expressing frustration with pricing and usage limits. Debate on value proposition vs alternatives. u/Civilanimal", "zh": "用户对定价和用量限制表达不满。讨论性价比与替代方案。u/Civilanimal" }
-              },
-              {
-                "badge": { "en": "104↑ · 30💬", "zh": "104↑ · 30💬" },
-                "title": { "en": "I've open sourced my personal Claude setup (Adderall not included)", "zh": "我开源了自己的 Claude 配置方案" },
-                "description": { "en": "Developer shares comprehensive Claude workflow configuration including prompts, tools, and organizational system. u/CreamNegative2414", "zh": "开发者分享完整的 Claude 工作流配置，包括提示词、工具和组织系统。u/CreamNegative2414" }
-              },
-              {
-                "badge": { "en": "80↑ · 78💬", "zh": "80↑ · 78💬" },
-                "title": { "en": "Anthropic founder: \"50% chance physicists replaced by AI in 2-3 years\"", "zh": "Anthropic 创始人：\"50% 概率 2-3 年内 AI 取代理论物理学家\"" },
-                "description": { "en": "Dario Amodei's bold prediction generates intense debate on AI's trajectory and timeline expectations. u/MetaKnowing", "zh": "Dario Amodei 的大胆预测引发关于 AI 发展轨迹和时间线预期的激烈讨论。u/MetaKnowing" }
-              },
-              {
-                "badge": { "en": "57↑ · 24💬", "zh": "57↑ · 24💬" },
-                "title": { "en": "2120 points on GitHub issue — Claude still doesn't support AGENTS.md", "zh": "GitHub Issue 获 2120 赞——Claude 仍不支持 AGENTS.md" },
-                "description": { "en": "Frustration over missing AGENTS.md support despite massive community demand. Feature request gaining traction. u/Salt_Department_1677", "zh": "尽管社区需求强烈，AGENTS.md 支持仍缺失。功能请求持续升温。u/Salt_Department_1677" }
-              }
+            "caption": { "en": "Top Posts from r/ClaudeAI", "zh": "r/ClaudeAI 热门帖子" },
+            "compact": true,
+            "columns": [
+              { "key": "title", "label": { "en": "Title", "zh": "标题" } },
+              { "key": "score", "label": { "en": "Score", "zh": "热度" }, "align": "right" },
+              { "key": "comments", "label": { "en": "Comments", "zh": "评论" }, "align": "right" }
+            ],
+            "rows": [
+              { "title": { "en": "Anthropic are partnered with Palantir", "zh": "Anthropic 与 Palantir 合作" }, "score": 879, "comments": 213 },
+              { "title": { "en": "Junior who learned to code with AI can't debug without it", "zh": "用 AI 学编程的初级开发者离开 AI 不会调试" }, "score": 718, "comments": 217 },
+              { "title": { "en": "Moltbot Is Now An Unaffordable Novelty", "zh": "Moltbot 现在是买不起的新玩具" }, "score": 191, "comments": 119 },
+              { "title": { "en": "If AI lets anyone create software, what happens to software companies?", "zh": "如果 AI 让人人都能写软件，软件公司怎么办？" }, "score": 191, "comments": 262 },
+              { "title": { "en": "Open Sourced my Personal Claude Setup", "zh": "开源了我的个人 Claude 配置" }, "score": 116, "comments": 34 },
+              { "title": { "en": "Opus did something really nice for me", "zh": "Opus 为我做了一件很暖心的事" }, "score": 100, "comments": 19 },
+              { "title": { "en": "2120 points on GitHub issue — Claude still doesn't support AGENTS.md", "zh": "GitHub issue 2120 票 — Claude 仍不支持 AGENTS.md" }, "score": 63, "comments": 25 },
+              { "title": { "en": "Open-source offline engine to map massive codebases for AI Agents", "zh": "开源离线引擎：为 AI Agent 映射大型代码库" }, "score": 50, "comments": 11 },
+              { "title": { "en": "Agent Skills with Anthropic — free course on DeepLearning.AI", "zh": "Anthropic Agent Skills — DeepLearning.AI 免费课程" }, "score": 46, "comments": 4 }
             ]
-          }
-        },
-        {
-          "type": "Callout",
-          "props": {
-            "type": "tip",
-            "title": { "en": "Notable: Free AI Course", "zh": "值得关注：免费 AI 课程" },
-            "content": { "en": "\"Agent Skills with Anthropic\" — a free course on DeepLearning.AI covering Claude agent development. Shared by u/luongnv-com (40↑).", "zh": "\"Agent Skills with Anthropic\"——DeepLearning.AI 上的免费课程，涵盖 Claude Agent 开发。由 u/luongnv-com 分享（40↑）。" }
           }
         }
       ]
@@ -96,58 +103,71 @@
       "type": "Section",
       "props": {
         "title": { "en": "r/ChatGPT — ChatGPT & OpenAI", "zh": "r/ChatGPT — ChatGPT 与 OpenAI" },
-        "icon": "chart",
+        "icon": "bulb",
         "collapsible": true,
         "defaultExpanded": true
       },
       "children": [
         {
-          "type": "Highlight",
+          "type": "Prose",
           "props": {
-            "text": { "en": "r/ChatGPT remains the most active community by far with posts hitting 2000+ upvotes. Major themes: AI accuracy concerns, ChatGPT as therapy tool, sycophancy criticism, and a report that the US Cyber Chief uploaded sensitive files to ChatGPT.", "zh": "r/ChatGPT 仍是最活跃社区，帖子获 2000+ 票。主要话题：AI 准确性问题、ChatGPT 作为心理治疗工具、过度奉承批评，以及美国网络安全主管上传敏感文件到 ChatGPT 的报道。" },
-            "type": "important"
+            "content": { "en": "A viral post about ChatGPT hallucination topped the charts with 2380 upvotes. Account bans, sycophancy criticism, and a high-profile security incident involving government officials uploading sensitive files to ChatGPT all made headlines.", "zh": "一篇关于 ChatGPT 幻觉的帖子以 2380 赞登顶。账号封禁、谄媚批评，以及政府官员将敏感文件上传到 ChatGPT 的安全事件均成为热门话题。" }
           }
         },
         {
-          "type": "ContributionList",
+          "type": "Grid",
+          "props": { "cols": 2 },
+          "children": [
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "ChatGPT Hallucination Goes Viral", "zh": "ChatGPT 幻觉帖子走红" },
+                    "description": { "en": "2380 upvotes, 324 comments — A blatantly wrong ChatGPT response went viral, reigniting the hallucination debate. Users share similar experiences and discuss reliability for professional use.", "zh": "2380 赞、324 评论 — 一个明显错误的 ChatGPT 回答走红，重新点燃了幻觉问题的讨论。用户分享类似经历并讨论专业使用中的可靠性。" },
+                    "icon": "warning",
+                    "variant": "highlight"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "Cyber Chief Uploaded Sensitive Files to ChatGPT", "zh": "网络安全主管将敏感文件上传至 ChatGPT" },
+                    "description": { "en": "339 upvotes — Trump's Cyber Chief reportedly uploaded sensitive government files to ChatGPT, raising serious data security concerns about AI tools in government.", "zh": "339 赞 — 报道称特朗普的网络安全主管将敏感政府文件上传到 ChatGPT，引发对政府使用 AI 工具数据安全的严重担忧。" },
+                    "icon": "info"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Table",
           "props": {
-            "numbered": true,
-            "items": [
-              {
-                "badge": { "en": "2265↑ · 315💬", "zh": "2265↑ · 315💬" },
-                "title": { "en": "\"Ummm I don't think that's correct…\"", "zh": "\"呃，我觉得这不对……\"" },
-                "description": { "en": "User catches ChatGPT giving confidently wrong answer. Top post of the day across all 3 communities. Classic accuracy/hallucination concern. u/2tittis", "zh": "用户发现 ChatGPT 自信地给出错误答案。全三社区今日最热帖。经典的准确性/幻觉问题。u/2tittis" }
-              },
-              {
-                "badge": { "en": "1398↑ · 45💬", "zh": "1398↑ · 45💬" },
-                "title": { "en": "\"ngl this timeline wild\"", "zh": "\"不得不说，这个时代太疯狂了\"" },
-                "description": { "en": "Viral reaction post to the pace of AI development. Resonates with community's sense of rapid change. u/hey_moin_04", "zh": "对 AI 发展速度的感叹引发病毒式传播。引起社区对快速变化的共鸣。u/hey_moin_04" }
-              },
-              {
-                "badge": { "en": "875↑ · 167💬", "zh": "875↑ · 167💬" },
-                "title": { "en": "It's 2am and I just discovered ChatGPT", "zh": "凌晨两点，我刚发现 ChatGPT" },
-                "description": { "en": "First-time user shares mind-blown experience. Shows AI adoption is still expanding to new demographics. u/littlestinky", "zh": "首次使用者分享惊叹体验。表明 AI 应用仍在向新人群扩展。u/littlestinky" }
-              },
-              {
-                "badge": { "en": "786↑ · 418💬", "zh": "786↑ · 418💬" },
-                "title": { "en": "Warning to ChatGPT Users", "zh": "对 ChatGPT 用户的警告" },
-                "description": { "en": "Security/privacy warning post with the most comments (418) today. Highlights risks of sharing sensitive information. u/ms221988", "zh": "安全/隐私警告帖，今日评论最多（418 条）。强调分享敏感信息的风险。u/ms221988" }
-              },
-              {
-                "badge": { "en": "451↑ · 162💬", "zh": "451↑ · 162💬" },
-                "title": { "en": "\"That's a REALLY sharp observation\" — AI sycophancy backlash", "zh": "\"这真是一个非常敏锐的观察\"——AI 过度奉承遭反弹" },
-                "description": { "en": "Users mocking ChatGPT's tendency to over-praise user inputs. Sycophancy remains a top community complaint. u/yun444g", "zh": "用户吐槽 ChatGPT 过度赞美用户输入的倾向。过度奉承仍是社区头号吐槽点。u/yun444g" }
-              },
-              {
-                "badge": { "en": "330↑ · 25💬", "zh": "330↑ · 25💬" },
-                "title": { "en": "Trump's Cyber Chief uploaded sensitive files to ChatGPT", "zh": "特朗普的网络安全主管将敏感文件上传到 ChatGPT" },
-                "description": { "en": "Report that a senior US cybersecurity official used ChatGPT with sensitive government files. Raises policy/security concerns. u/biograf_", "zh": "报道称一名美国高级网络安全官员在 ChatGPT 中使用敏感政府文件。引发政策/安全担忧。u/biograf_" }
-              },
-              {
-                "badge": { "en": "179↑ · 105💬", "zh": "179↑ · 105💬" },
-                "title": { "en": "Using ChatGPT as a therapist/life coach — it's working wonders", "zh": "把 ChatGPT 当心理治疗师/人生教练用——效果出奇地好" },
-                "description": { "en": "Polarizing post: some praise AI as accessible mental health tool, others warn about replacing professional care. u/TomatoClown24", "zh": "争议帖：有人赞扬 AI 是可及的心理健康工具，也有人警告不应替代专业治疗。u/TomatoClown24" }
-              }
+            "caption": { "en": "Top Posts from r/ChatGPT", "zh": "r/ChatGPT 热门帖子" },
+            "compact": true,
+            "columns": [
+              { "key": "title", "label": { "en": "Title", "zh": "标题" } },
+              { "key": "score", "label": { "en": "Score", "zh": "热度" }, "align": "right" },
+              { "key": "comments", "label": { "en": "Comments", "zh": "评论" }, "align": "right" }
+            ],
+            "rows": [
+              { "title": { "en": "I don't think that's correct… (hallucination viral)", "zh": "我觉得这不对…（幻觉走红帖）" }, "score": 2380, "comments": 324 },
+              { "title": { "en": "ngl this timeline wild", "zh": "不得不说这个时间线太疯狂了" }, "score": 1442, "comments": 49 },
+              { "title": { "en": "Warning to ChatGPT Users", "zh": "给 ChatGPT 用户的警告" }, "score": 800, "comments": 426 },
+              { "title": { "en": "\"That's a REALLY sharp observation\" — sycophancy criticism", "zh": "\"这个观察真的很敏锐\" — 谄媚批评" }, "score": 459, "comments": 168 },
+              { "title": { "en": "Cyber Chief uploaded sensitive files to ChatGPT", "zh": "网络安全主管将敏感文件上传至 ChatGPT" }, "score": 339, "comments": 25 },
+              { "title": { "en": "My account got banned today, I'm scared", "zh": "我的账号今天被封了，好害怕" }, "score": 317, "comments": 204 },
+              { "title": { "en": "Stopped paying for ChatGPT — what happened next", "zh": "取消了 ChatGPT 订阅后发生了什么" }, "score": 245, "comments": 91 },
+              { "title": { "en": "Using ChatGPT as a therapist — it has been working wonders", "zh": "把 ChatGPT 当心理咨询师用，效果惊人" }, "score": 181, "comments": 109 }
             ]
           }
         }
@@ -156,58 +176,72 @@
     {
       "type": "Section",
       "props": {
-        "title": { "en": "r/AI_Agents — AI Agent Development", "zh": "r/AI_Agents — AI Agent 开发" },
+        "title": { "en": "r/AI_Agents — Agent Development", "zh": "r/AI_Agents — Agent 开发" },
         "icon": "code",
         "collapsible": true,
         "defaultExpanded": true
       },
       "children": [
         {
-          "type": "Highlight",
+          "type": "Prose",
           "props": {
-            "text": { "en": "r/AI_Agents focuses on practical agent development. Today's highlights: leadership perception of AI, agent evaluation challenges, and new framework discussions. Engagement is lower but more technically focused.", "zh": "r/AI_Agents 聚焦实用 Agent 开发。今日亮点：领导层对 AI 的认知、Agent 评估挑战和新框架讨论。互动量较低但技术含量更高。" },
-            "type": "quote"
+            "content": { "en": "A field report from a Director-level perspective on what leadership actually thinks about AI dominated the discussion. Agent evaluation in production, Moltbot's impact on AI frameworks, and Kimi's open-source desktop agent were also notable.", "zh": "一份来自总监视角的实地报告——领导层实际上如何看待 AI——主导了讨论。Agent 生产环境评估、Moltbot 对 AI 框架的影响，以及 Kimi 的开源桌面 Agent 也值得关注。" }
           }
         },
         {
-          "type": "ContributionList",
+          "type": "Grid",
+          "props": { "cols": 2 },
+          "children": [
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "What Leadership Actually Thinks AI Is", "zh": "领导层实际上如何看待 AI" },
+                    "description": { "en": "55 upvotes, 15 comments — A Director shares candid notes on how leadership perceives AI: mostly as a cost-cutting tool, not as a transformative technology. Gap between hype and executive understanding.", "zh": "55 赞、15 评论 — 一位总监分享了领导层如何看待 AI 的真实笔记：主要视为降本工具，而非变革性技术。炒作与高管认知之间存在鸿沟。" },
+                    "icon": "info",
+                    "variant": "highlight"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "How to Evaluate Agents in Production", "zh": "如何在生产环境中评估 Agent" },
+                    "description": { "en": "28 upvotes, 16 comments — Practical discussion on agent evaluation beyond notebooks. Covers monitoring, feedback loops, and real-world metrics for deployed agents.", "zh": "28 赞、16 评论 — 关于笔记本之外的 Agent 评估实践讨论。涵盖监控、反馈循环和已部署 Agent 的实际指标。" },
+                    "icon": "chart"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Table",
           "props": {
-            "numbered": true,
-            "items": [
-              {
-                "badge": { "en": "54↑ · 15💬", "zh": "54↑ · 15💬" },
-                "title": { "en": "Field Report: What leadership actually thinks AI is", "zh": "实地报告：领导层到底怎么看 AI" },
-                "description": { "en": "A Director-level perspective on the gap between AI hype and corporate understanding. Reveals disconnect between tech teams and management. u/forevergeeks", "zh": "总监级视角分享 AI 炒作与企业认知之间的差距。揭示技术团队与管理层的脱节。u/forevergeeks" }
-              },
-              {
-                "badge": { "en": "28↑ · 16💬", "zh": "28↑ · 16💬" },
-                "title": { "en": "How are people actually evaluating agents once they leave the notebook?", "zh": "Agent 出了 Notebook 之后，大家到底怎么评估？" },
-                "description": { "en": "Practical discussion on agent evaluation in production. Key challenge: metrics and testing strategies beyond prototyping. u/The_Default_Guyxxo", "zh": "关于生产环境中 Agent 评估的实战讨论。核心挑战：原型之后的指标和测试策略。u/The_Default_Guyxxo" }
-              },
-              {
-                "badge": { "en": "17↑ · 9💬", "zh": "17↑ · 9💬" },
-                "title": { "en": "Moltbot and the Rise of AI Frameworks", "zh": "Moltbot 与 AI 框架的崛起" },
-                "description": { "en": "Analysis of the growing AI agent framework landscape and what sets different approaches apart. u/mapicallo", "zh": "分析日益增长的 AI Agent 框架生态以及不同方案的差异化特点。u/mapicallo" }
-              },
-              {
-                "badge": { "en": "12↑ · 6💬", "zh": "12↑ · 6💬" },
-                "title": { "en": "Kimi's open-source local desktop agent — first impressions", "zh": "Kimi 的开源本地桌面 Agent——初体验" },
-                "description": { "en": "Review of Kimi's new open-source desktop agent. Focus on local execution and privacy. u/Infamous-Essay4647", "zh": "Kimi 新开源桌面 Agent 测评。关注本地执行和隐私。u/Infamous-Essay4647" }
-              },
-              {
-                "badge": { "en": "10↑ · 6💬", "zh": "10↑ · 6💬" },
-                "title": { "en": "Complete reference guide for building AI agents (200+ scripts)", "zh": "构建 AI Agent 完整参考指南（200+ 脚本）" },
-                "description": { "en": "Comprehensive guide from API basics to deployment. 200+ scripts covering the full agent development lifecycle. u/SNkaraoglu", "zh": "从 API 基础到部署的全面指南。200+ 脚本覆盖完整 Agent 开发生命周期。u/SNkaraoglu" }
-              }
+            "caption": { "en": "Top Posts from r/AI_Agents", "zh": "r/AI_Agents 热门帖子" },
+            "compact": true,
+            "columns": [
+              { "key": "title", "label": { "en": "Title", "zh": "标题" } },
+              { "key": "score", "label": { "en": "Score", "zh": "热度" }, "align": "right" },
+              { "key": "comments", "label": { "en": "Comments", "zh": "评论" }, "align": "right" }
+            ],
+            "rows": [
+              { "title": { "en": "What leadership actually thinks AI is (Director's notes)", "zh": "领导层实际上如何看待 AI（总监笔记）" }, "score": 55, "comments": 15 },
+              { "title": { "en": "How are people evaluating agents in production?", "zh": "大家在生产环境中如何评估 Agent？" }, "score": 28, "comments": 16 },
+              { "title": { "en": "Moltbot and the Rise of AI Frameworks", "zh": "Moltbot 与 AI 框架的崛起" }, "score": 18, "comments": 9 },
+              { "title": { "en": "Kimi's open-source local desktop agent", "zh": "Kimi 开源本地桌面 Agent" }, "score": 13, "comments": 7 },
+              { "title": { "en": "Job search assistant built with LangChain Deep Agents", "zh": "用 LangChain Deep Agents 构建求职助手" }, "score": 12, "comments": 3 },
+              { "title": { "en": "Complete reference guide for building AI agents (200+ scripts)", "zh": "AI Agent 构建完整参考指南（200+ 脚本）" }, "score": 10, "comments": 6 },
+              { "title": { "en": "Is AI-automated outreach useful or just spam?", "zh": "AI 自动化外联有用还是纯垃圾邮件？" }, "score": 6, "comments": 14 }
             ]
-          }
-        },
-        {
-          "type": "Callout",
-          "props": {
-            "type": "info",
-            "title": { "en": "Emerging Tools Mentioned", "zh": "被提及的新兴工具" },
-            "content": { "en": "CrewAI, LangChain Deep Agents, Kimi Desktop Agent, Moltbot framework — agent frameworks continue proliferating.", "zh": "CrewAI、LangChain Deep Agents、Kimi 桌面 Agent、Moltbot 框架——Agent 框架持续涌现。" }
           }
         }
       ]
@@ -216,50 +250,54 @@
       "type": "Section",
       "props": {
         "title": { "en": "Cross-Community Trends", "zh": "跨社区趋势" },
-        "icon": "bulb",
-        "collapsible": true,
-        "defaultExpanded": true
+        "icon": "chart"
       },
       "children": [
         {
           "type": "Grid",
-          "props": { "cols": 2 },
+          "props": { "cols": 3 },
           "children": [
             {
-              "type": "KeyPoint",
-              "props": {
-                "icon": "warning",
-                "title": { "en": "AI Trust & Safety Concerns", "zh": "AI 信任与安全问题" },
-                "description": { "en": "Hallucination (r/ChatGPT), Palantir partnership ethics (r/ClaudeAI), and sensitive data leaks dominate discussions today.", "zh": "幻觉问题（r/ChatGPT）、Palantir 合作伦理（r/ClaudeAI）和敏感数据泄露主导了今日讨论。" },
-                "variant": "warning"
-              }
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "Moltbot Everywhere", "zh": "Moltbot 无处不在" },
+                    "description": { "en": "Discussed across all three communities — pricing concerns in r/ClaudeAI, framework implications in r/AI_Agents, timeline memes in r/ChatGPT.", "zh": "三个社区都在讨论 — r/ClaudeAI 关注定价、r/AI_Agents 讨论框架影响、r/ChatGPT 玩梗。" },
+                    "icon": "star"
+                  }
+                }
+              ]
             },
             {
-              "type": "KeyPoint",
-              "props": {
-                "icon": "code",
-                "title": { "en": "AI in Software Development", "zh": "AI 在软件开发中的角色" },
-                "description": { "en": "Juniors dependent on AI (r/ClaudeAI), agent evaluation in production (r/AI_Agents), and the future of software companies all discussed.", "zh": "新人依赖 AI（r/ClaudeAI）、生产环境 Agent 评估（r/AI_Agents）以及软件公司的未来都在讨论中。" },
-                "variant": "primary"
-              }
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "AI Reliability Crisis", "zh": "AI 可靠性危机" },
+                    "description": { "en": "Hallucination concerns (r/ChatGPT), sycophancy criticism, and the junior dev debate all point to growing unease about over-reliance on AI.", "zh": "幻觉问题（r/ChatGPT）、谄媚批评和初级开发者争论都指向对过度依赖 AI 的不安。" },
+                    "icon": "warning"
+                  }
+                }
+              ]
             },
             {
-              "type": "KeyPoint",
-              "props": {
-                "icon": "star",
-                "title": { "en": "AI Sycophancy Backlash", "zh": "AI 过度奉承遭反弹" },
-                "description": { "en": "Both ChatGPT and Claude users increasingly vocal about models being overly agreeable and praising instead of being honest.", "zh": "ChatGPT 和 Claude 用户越来越不满模型过于顺从和赞美，而非给出诚实回答。" },
-                "variant": "danger"
-              }
-            },
-            {
-              "type": "KeyPoint",
-              "props": {
-                "icon": "bulb",
-                "title": { "en": "Agent Frameworks Proliferating", "zh": "Agent 框架持续涌现" },
-                "description": { "en": "Moltbot, CrewAI, LangChain Deep Agents, Kimi Desktop Agent — the tooling landscape keeps expanding faster than consolidating.", "zh": "Moltbot、CrewAI、LangChain Deep Agents、Kimi 桌面 Agent——工具生态扩张速度远超整合速度。" },
-                "variant": "success"
-              }
+              "type": "Card",
+              "props": { "variant": "default" },
+              "children": [
+                {
+                  "type": "KeyPoint",
+                  "props": {
+                    "title": { "en": "AI in Workforce", "zh": "AI 与劳动力" },
+                    "description": { "en": "Junior devs, leadership perception, and the 'what happens to software companies' thread — the employment impact of AI is the undercurrent of the day.", "zh": "初级开发者、领导层认知、'软件公司怎么办'——AI 对就业的影响是今天的暗流。" },
+                    "icon": "user"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -269,44 +307,32 @@
       "type": "Section",
       "props": {
         "title": { "en": "Community Sentiment", "zh": "社区情绪" },
-        "icon": "chart"
+        "icon": "info"
       },
       "children": [
         {
-          "type": "ResultsTable",
+          "type": "Table",
           "props": {
-            "caption": { "en": "Sentiment across AI communities today", "zh": "今日各 AI 社区情绪" },
             "columns": [
               { "key": "community", "label": { "en": "Community", "zh": "社区" } },
               { "key": "sentiment", "label": { "en": "Sentiment", "zh": "情绪" } },
-              { "key": "concern", "label": { "en": "Top Concern", "zh": "最大关切" } },
-              { "key": "posts", "label": { "en": "Top Posts", "zh": "热门帖数" } }
+              { "key": "concern", "label": { "en": "Top Concern", "zh": "核心关注" } }
             ],
             "rows": [
-              { "community": "r/ChatGPT", "sentiment": { "en": "Mixed — Amused & Concerned", "zh": "混合——既好笑又担忧" }, "concern": { "en": "Hallucinations & Security", "zh": "幻觉与安全" }, "posts": "15" },
-              { "community": "r/ClaudeAI", "sentiment": { "en": "Polarized — Excited & Frustrated", "zh": "两极化——兴奋与失望" }, "concern": { "en": "Pricing & Ethics", "zh": "定价与伦理" }, "posts": "15" },
-              { "community": "r/AI_Agents", "sentiment": { "en": "Pragmatic — Focused", "zh": "务实——聚焦实干" }, "concern": { "en": "Production Readiness", "zh": "生产就绪" }, "posts": "15" }
+              { "community": "r/ClaudeAI", "sentiment": { "en": "Divided", "zh": "分裂" }, "concern": { "en": "Palantir partnership ethics", "zh": "Palantir 合作的伦理问题" } },
+              { "community": "r/ChatGPT", "sentiment": { "en": "Skeptical", "zh": "质疑" }, "concern": { "en": "Hallucination & reliability", "zh": "幻觉与可靠性" } },
+              { "community": "r/AI_Agents", "sentiment": { "en": "Pragmatic", "zh": "务实" }, "concern": { "en": "Production evaluation gaps", "zh": "生产环境评估空白" } }
             ]
           }
         }
       ]
     },
     {
-      "type": "LinkGroup",
-      "props": {
-        "links": [
-          { "href": "https://www.reddit.com/r/ClaudeAI/top/?t=day", "label": "r/ClaudeAI", "icon": "link", "external": true },
-          { "href": "https://www.reddit.com/r/ChatGPT/top/?t=day", "label": "r/ChatGPT", "icon": "link", "external": true },
-          { "href": "https://www.reddit.com/r/AI_Agents/top/?t=day", "label": "r/AI_Agents", "icon": "link", "external": true }
-        ]
-      }
-    },
-    {
       "type": "BrandFooter",
       "props": {
-        "timestamp": "2026-01-30T16:00:00Z",
-        "attribution": { "en": "Generated by Actionbook json-ui · AI Daily Skill", "zh": "由 Actionbook json-ui · AI Daily Skill 生成" },
-        "disclaimer": { "en": "Data sourced from Reddit communities via JSON API. Post scores and comments reflect time of collection.", "zh": "数据通过 Reddit JSON API 采集。帖子分数和评论数为采集时数据。" }
+        "attribution": { "en": "Powered by Actionbook", "zh": "由 Actionbook 提供支持" },
+        "disclaimer": { "en": "Data sourced from Reddit public APIs. Summaries generated by AI.", "zh": "数据来源于 Reddit 公开 API。摘要由 AI 生成。" },
+        "timestamp": "2026-01-30T02:30:00Z"
       }
     }
   ]
